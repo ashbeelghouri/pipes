@@ -6,12 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name: string = '';
-  date: string = '';
-  onNameChange(name:string){
-    this.name = name;
+  name: String;
+  date: string;
+  price: number;
+  height: number;
+  miles: number;
+  
+  onMilesChange(value: string) {
+    this.miles = parseFloat(value);
   }
-  onDateChange (value:string) {
+  onNameChange(value: string) {
+    this.name = value;
+  }
+  onDateChange(value: string) {
     this.date = value;
+  }
+  onPriceChange(value: string) {
+    this.price = parseFloat(value);
+  }
+  onHeightChange(value: string) {
+    this.height = parseFloat(value);
   }
 }

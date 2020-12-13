@@ -30,5 +30,51 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="form-group col">
+      <div>
+        <label for="">Date</label>
+        <input class="form-control" (input) = "onPriceChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col">
+      <label for=""><b>Price</b></label>
+      <div>
+        {{ price | currency }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <div>
+        <label for="">Height</label>
+        <input class="form-control" (input) = "onHeightChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col">
+      <label for=""><b>Height</b></label>
+      <div>
+        {{ height | number: '1.0-0' }}
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="form-group col">
+      <div>
+        <label for="">Miles</label>
+        <input class="form-control" (input) = "onMilesChange($event.target.value)">
+      </div>
+    </div>
+    <div class="col">
+      <label for=""><b>KM</b></label>
+      <div>
+        {{ miles | convert: "mile"}}
+      </div>
+    </div>
+  </div>
+
 
 </div>
